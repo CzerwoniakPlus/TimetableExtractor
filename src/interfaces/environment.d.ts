@@ -3,6 +3,8 @@ declare global {
     interface ProcessEnv {
       AI_URL_ENDPOINT: string;
       AI_KEY: string;
+      API_ENDPOINT: string;
+      API_SECRET: string;
     }
   }
 }
