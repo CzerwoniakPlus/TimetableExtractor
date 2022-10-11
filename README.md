@@ -59,6 +59,7 @@ TimetableExtractor is a really simple tool for automatical obtaining, sorting th
 ### Built with
 
 - [![Node][node.js]][node-url]
+- [![Azure][azure]][azure-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,9 +168,5 @@ Project Link: [https://github.com/CzerwoniakPlus/CzerwoniakPlus](https://github.
 
 [node.js]: https://img.shields.io/badge/-Node.js-333333?style=for-the-badge&logo=node.js
 [node-url]: https://nodejs.org/
-[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[react-url]: https://reactjs.org/
-[react-native]: https://img.shields.io/badge/-React%20Native-%2320232a?style=for-the-badge&logo=react
-[react-native-url]: https://reactnative.dev/
-[webpack]: https://img.shields.io/badge/Webpack-2ea44f?style=for-the-badge&logo=webpack&logoColor=ffffff
-[webpack-url]: https://webpack.js.org/
+[azure]: https://img.shields.io/badge/-Azure-008AD7?style=for-the-badge&logo=Azure+DevOps
+[azure-url]: https://azure.com/
