@@ -8,7 +8,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/CzerwoniakPlus/CzerwoniakPlus">
+  <a href="https://github.com/CzerwoniakPlus/TimetableExtractor">
     <img src="https://lydia.czerwoniakplus.pl/assets/CzerwoniakPlus/CzerwoniakPlus-circle.png"  alt="Logo" width="80" height="80">
   </a>
 
@@ -146,7 +146,7 @@ Distributed under the BSD-3-Clause license. See `LICENSE.md` for more informatio
 
 Mateusz Tatko - [@mtatko](https://linkedin.com/in/mtatko) - mtatko@mtatko.dev
 
-Project Link: [https://github.com/CzerwoniakPlus/CzerwoniakPlus](https://github.com/CzerwoniakPlus/TimetableExtractor)
+Project Link: [https://github.com/CzerwoniakPlus/TimetableExtractor](https://github.com/CzerwoniakPlus/TimetableExtractor)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
