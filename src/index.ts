@@ -22,7 +22,7 @@ const main = async () => {
   });
 };
 
-cron.schedule('0 */6 * * *', () => {
+cron.schedule('30 16 * * *', () => {
   console.info('[CRON] Updating all timetables...');
   main();
 });
