@@ -3,6 +3,7 @@ import { JSDOM } from 'jsdom';
 
 const getTimetableURL = async (): Promise<string> => {
   return new Promise(async (resolve) => {
+    console.debug('[TIMETABLEURL] Obtaining timetable URL...');
     const homePage = await got('http://zs1rowecki.pl');
     const homePageDocument = new JSDOM(homePage.body).window.document;
     const timetablePageURL = homePageDocument
@@ -25,6 +26,7 @@ const getTimetableURL = async (): Promise<string> => {
 };
 
 const getTimetable = async (): Promise<Uint8Array> => {
+  console.debug('[TIMETABLES] Obtaining timetables...');
   return new Promise(async (resolve) => {
     const timetableURL = await getTimetableURL();
     const timetable = await got(timetableURL);

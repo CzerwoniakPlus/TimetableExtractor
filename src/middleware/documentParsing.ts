@@ -9,6 +9,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const getTimetablePagesBytes = async (): Promise<Uint8Array[]> => {
+  console.debug('[TIMETABLES] Converting document to bytes...');
   return new Promise(async (resolve) => {
     const pdfBytesArr: Uint8Array[] = [];
     const timetable = await getTimetable();
@@ -32,7 +33,11 @@ const mapClassesToTimetables = async (): Promise<MappedTimetables> => {
     for (const timetable of timetablePagesBytes) {
       const itemIndex = timetablePagesBytes.indexOf(timetable);
       if (itemIndex % 10 === 0 && itemIndex !== 0) {
+        console.debug('[TIMETABLES] Waiting 60 seconds before continuing...');
         await sleep(60000);
+        console.debug(
+          `[TIMETABLES] Reading class name for page ${itemIndex + 1}...`,
+        );
         const request = await got.post(process.env.AI_URL_ENDPOINT, {
           headers: {
             'Ocp-Apim-Subscription-Key': process.env.AI_KEY,
@@ -58,6 +63,9 @@ const mapClassesToTimetables = async (): Promise<MappedTimetables> => {
         }, 1000);
       } else {
         await sleep(1500);
+        console.debug(
+          `[TIMETABLES] Reading class name for page ${itemIndex + 1}...`,
+        );
         const request = await got.post(process.env.AI_URL_ENDPOINT, {
           headers: {
             'Ocp-Apim-Subscription-Key': process.env.AI_KEY,
@@ -89,6 +97,7 @@ const mapClassesToTimetables = async (): Promise<MappedTimetables> => {
 };
 
 const getPDFsInBase64 = async (): Promise<Base64Timetables> => {
+  console.debug('[TIMETABLES] Converting timetables to base64...');
   return new Promise(async (resolve) => {
     const mappedTimetables = await mapClassesToTimetables();
     const blobbedTimetables: Base64Timetables = [];

@@ -107,3 +107,5 @@ dist
 .vscode-test
 
 build/
+data/**/*
+!data/.gitkeep
