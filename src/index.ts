@@ -29,7 +29,7 @@ cron.schedule('30 16 * * *', () => {
 
 cron.schedule('*/5 * * * *', async () => {
   console.info('[CRON] Checking timetables link...');
-  if (fs.existsSync('data/timetablelink.txt')) {
+  if (fs.existsSync('data/timetableLink.txt')) {
     console.debug('[TIMETABLESLNK] Saved URL exists!');
     const savedTimetableLink = await fs.promises.readFile(
       'data/timetableLink.txt',
